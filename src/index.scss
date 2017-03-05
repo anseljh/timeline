@@ -1,0 +1,15 @@
+@import "~TimelineJS3/compiled/css/timeline.css";
+
+html, body, #timeline-embed {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+.tl-storyslider {
+	top: 0 !important;
+}
+
+.tl-attribution {
+	display: none;
+}
