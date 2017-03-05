@@ -1,0 +1,21 @@
+{
+  "name": "timeline",
+  "scripts": {},
+  "env": {
+	"GA_PROPERTY_ID": "",
+	"NODE_ENV": {
+	  "required": true
+	},
+	"NPM_CONFIG_PRODUCTION": {
+	  "required": true
+	},
+	"DEBUG": "TRUE"
+  },
+  "formation": {},
+  "addons": [],
+  "buildpacks": [
+	{
+	  "url": "heroku/nodejs"
+	}
+  ]
+}
