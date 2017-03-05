@@ -10,6 +10,10 @@
     "build": "NODE_ENV=production webpack",
     "create": "node create-event.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/L4GG/timeline.git"
+  },
   "author": "Lawyers for Good Government <info@lawyersforgoodgovernment.org> (https://lawyersforgoodgovernment.org)",
   "license": "MIT",
   "devDependencies": {
