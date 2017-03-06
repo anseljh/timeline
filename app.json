@@ -2,7 +2,7 @@
   "name": "timeline",
   "scripts": {},
   "env": {
-	"GA_PROPERTY_ID": "",
+	"GA_PROPERTY_ID": "SAMPLE",
 	"NODE_ENV": {
 	  "required": true
 	},
