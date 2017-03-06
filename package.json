@@ -1,7 +1,7 @@
 {
   "name": "timeline",
   "version": "1.0.0",
-  "description": "",
+  "description": "Microsite to display events compiled by Lawyers for Good Government Volunteers.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
