@@ -74,5 +74,13 @@ export default {
 	MIKHAIL_GORBACHEV: {
 		title: 'Mikhail Gorbachev',
 		description: 'Events involving Mr. Gorbachev'
+	},
+	FINANCES: {
+		title: 'Finances',
+		description: 'Information relating to Trump finances'
+	},
+	BANKRUPTCY: {
+		title: 'Bankruptcy',
+		description: 'Information relating to Trump bankruptcies'
 	}
 }
