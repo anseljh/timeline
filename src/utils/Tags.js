@@ -62,5 +62,13 @@ export default {
 	NUCLEAR_WEAPONS: {
 		title: 'Nuclear Weapons',
 		description: 'Statements about nuclear weapons and Russia'
+	},
+	POLITBURO: {
+		title: 'Politburo',
+		description: 'Central Committee of the Soviet Communist Party'
+	},
+	HOTEL: {
+		title: 'Hotel',
+		description: 'Hotel to be built or owned by Donald Trump'
 	}
 }
