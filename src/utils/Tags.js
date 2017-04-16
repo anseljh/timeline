@@ -102,5 +102,9 @@ export default {
 	TRUMP_TOWER: {
 		title: 'Trump Tower',
 		description: 'Events occuring in or relating to Trump Tower'
+	},
+	MICHAEL_FLYNN: {
+		title: 'Michael Flynn',
+		description: 'Events involving Michael Flynn'
 	}
 }
