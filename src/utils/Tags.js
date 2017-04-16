@@ -82,5 +82,23 @@ export default {
 	BANKRUPTCY: {
 		title: 'Bankruptcy',
 		description: 'Information relating to Trump bankruptcies'
+	},
+	KAZAKHSTAN: {
+		title: 'Kazakhstan',
+		description: 'Events relating to Kazakhstan or entities in Kazakhstan'
+	},
+	PUTIN: {
+		title: 'Putin',
+		description: 'Activities and events involving Putin'
+	},
+		title: 'Trump Soho',
+	},
+	BAYROCK: {
+		title: 'Bayrock',
+		description: 'Relationships between Trump and Bayrock and Russia'
+	},
+	FELIX_SATER: {
+		title: 'Felix Sater',
+		description: 'Relationships between Felix Sater and Trump and Russia'
 	}
 }
