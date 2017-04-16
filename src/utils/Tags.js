@@ -70,5 +70,9 @@ export default {
 	HOTEL: {
 		title: 'Hotel',
 		description: 'Hotel to be built or owned by Donald Trump'
+	},
+	MIKHAIL_GORBACHEV: {
+		title: 'Mikhail Gorbachev',
+		description: 'Events involving Mr. Gorbachev'
 	}
 }
