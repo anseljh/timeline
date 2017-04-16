@@ -106,5 +106,9 @@ export default {
 	MICHAEL_FLYNN: {
 		title: 'Michael Flynn',
 		description: 'Events involving Michael Flynn'
+	},
+	VICE_PRESIDENT: {
+		title: 'Vice President',
+		description: 'Information or events relating to a Vice President'
 	}
 }
