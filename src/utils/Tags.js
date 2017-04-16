@@ -91,8 +91,6 @@ export default {
 		title: 'Putin',
 		description: 'Activities and events involving Putin'
 	},
-		title: 'Trump Soho',
-	},
 	BAYROCK: {
 		title: 'Bayrock',
 		description: 'Relationships between Trump and Bayrock and Russia'
@@ -100,5 +98,9 @@ export default {
 	FELIX_SATER: {
 		title: 'Felix Sater',
 		description: 'Relationships between Felix Sater and Trump and Russia'
+	},
+	TRUMP_TOWER: {
+		title: 'Trump Tower',
+		description: 'Events occuring in or relating to Trump Tower'
 	}
 }
