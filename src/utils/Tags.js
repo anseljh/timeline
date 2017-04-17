@@ -141,6 +141,14 @@ export default {
 	},
 	FBI: {
 		title: 'FBI',
-		description: 'Actions by the FBI'
+		description: 'Investigations and statements by the FBI'
+	},
+	SALLY_YATES: {
+		title: 'Sally Yates',
+		description: 'Actions and statements by acting Attorney General Sally Yates'
+	},
+	DOJ: {
+		title: 'DOJ',
+		description: 'Investigations and statements by the Department of Justice'
 	}
 }
