@@ -126,5 +126,17 @@ export default {
 	MICHAEL_FLYNN_JR: {
 		title: 'Michael Flynn Jr.',
 		description: 'Actions by or involving Michael Flynn Jr.'
+	},
+	CONTACT_AFTER_ELECTION: {
+		title: 'Post Election Contact',
+		description: 'Contact with Russia after the 2016 election'
+	},
+	SANCTIONS: {
+		title: 'Sanctions',
+		description: 'Discussions relating to U.S. sanctions against Russia'
+	},
+	SERGEY_KISLYAK: {
+		title: 'Sergey Kislyak',
+		description: 'Actions by or conversations with Russian Ambassador Sergey Kislyak'
 	}
 }
