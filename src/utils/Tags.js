@@ -138,5 +138,9 @@ export default {
 	SERGEY_KISLYAK: {
 		title: 'Sergey Kislyak',
 		description: 'Actions by or conversations with Russian Ambassador Sergey Kislyak'
+	},
+	FBI: {
+		title: 'FBI',
+		description: 'Actions by the FBI'
 	}
 }
