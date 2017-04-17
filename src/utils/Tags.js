@@ -114,5 +114,9 @@ export default {
 	NSA: {
 		title: 'NSA',
 		description: 'Actions by or relating to the national security adviser'
+	},
+	REPUBLICAN_CONVENTION: {
+		title: 'Republican Convention',
+		description: 'Events at the Republican Convention'
 	}
 }
