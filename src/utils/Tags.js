@@ -110,5 +110,9 @@ export default {
 	VICE_PRESIDENT: {
 		title: 'Vice President',
 		description: 'Information or events relating to a Vice President'
+	},
+	NSA: {
+		title: 'NSA',
+		description: 'Actions by or relating to the national security adviser'
 	}
 }
