@@ -118,5 +118,13 @@ export default {
 	REPUBLICAN_CONVENTION: {
 		title: 'Republican Convention',
 		description: 'Events at the Republican Convention'
+	},
+	MIKE_PENCE: {
+		title: 'Mike Pence',
+		description: 'Actions by or involving Mike Pence'
+	},
+	MICHAEL_FLYNN_JR: {
+		title: 'Michael Flynn Jr.',
+		description: 'Actions by or involving Michael Flynn Jr.'
 	}
 }
