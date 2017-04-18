@@ -150,5 +150,13 @@ export default {
 	DOJ: {
 		title: 'DOJ',
 		description: 'Investigations and statements by the Department of Justice'
+	},
+	DONALD_F_MCGAHN_II: {
+		title: 'Donald F. McGahn II',
+		description: 'Actions and statements by Donald F. McGahn, II, White House Counsel'
+	},
+	KELLYANNE_CONWAY: {
+		title: 'Kellyanne Conway',
+		description: 'Statements by Kelleyanne Conway'
 	}
 }
