@@ -174,5 +174,13 @@ export default {
 	TRUMP_CAMPAIGN: {
 		title: 'Trump Campaign',
 		description: 'Actions and statemens by the Trump Campaign'
+	},
+	PAUL_MANAFORT: {
+		title: 'Paul Manafort',
+		description: 'Information about Paul Manafort and his connections to Russia and Ukraine'
+	},
+	UKRAINE: {
+		title: 'Ukraine',
+		description: 'Relationships of Trump associates with Ukraine and policy relating to Ukraine'
 	}
 }
