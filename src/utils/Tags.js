@@ -162,5 +162,17 @@ export default {
 	DMITRY_RYBOLOVLEV: {
 		title: 'Dmitry Rybolovlev',
 		description: 'Contact between Donald Trump and Russian oligarch, Dmitry Rybolovlev'
+	},
+	CARTER_PAGE: {
+		title: 'Carter Page',
+		description: 'Carter Page, Foreign Policy Adviser to the Trump Campaign, contact with Russia'
+	},
+	HOPE_HICKS: {
+		title: 'Hope Hicks',
+		description: 'Statements by Hope Hicks, spokesperson for the Trump Campaign'
+	},
+	TRUMP_CAMPAIGN: {
+		title: 'Trump Campaign',
+		description: 'Actions and statemens by the Trump Campaign'
 	}
 }
