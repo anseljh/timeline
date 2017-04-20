@@ -186,5 +186,17 @@ export default {
 	REX_TILLERSON: {
 		title: 'Rex Tillerson',
 		description: 'Statements and actions by Rex Tillerson relating to Russia'
+	},
+	ROGER_STONE: {
+		title: 'Roger Stone',
+		description: 'Relationships and contacts between Roger Stone and Russia'
+	},
+	DNC: {
+		title: 'DNC',
+		description: 'Information relating to the hack of the Democratic National Committee'
+	},
+	GUCCIFER: {
+		title: 'Guccifer 2.0',
+		description: 'Guccifer 2.0 involvement in hacking during the 2016 election'
 	}
 }
