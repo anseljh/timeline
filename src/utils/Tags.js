@@ -182,5 +182,9 @@ export default {
 	UKRAINE: {
 		title: 'Ukraine',
 		description: 'Relationships of Trump associates with Ukraine and policy relating to Ukraine'
+	},
+	REX_TILLERSON: {
+		title: 'Rex Tillerson',
+		description: 'Statements and actions by Rex Tillerson relating to Russia'
 	}
 }
