@@ -158,5 +158,9 @@ export default {
 	KELLYANNE_CONWAY: {
 		title: 'Kellyanne Conway',
 		description: 'Statements by Kelleyanne Conway'
+	},
+	DMITRY_RYBOLOVLEV: {
+		title: 'Dmitry Rybolovlev',
+		description: 'Contact between Donald Trump and Russian oligarch, Dmitry Rybolovlev'
 	}
 }
