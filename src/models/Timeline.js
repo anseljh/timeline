@@ -3,7 +3,7 @@ import {differenceWith, some} from 'lodash'
 
 const options = {
 	hash_bookmark: true,
-	scale_factor: '0.5',
+	scale_factor: '10',
 	debug: process.env.DEBUG === 'TRUE',
 	ga_property_id: process.env.GA_PROPERTY_ID,
 	api_key_embedly: process.env.EMBEDLY_API_KEY
