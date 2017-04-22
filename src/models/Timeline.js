@@ -16,11 +16,12 @@ function eventsComparator(eventA, eventB) {
 export default class Timeline {
 	constructor(title, events, tags) {
 		this.events = events
-		this.tags = new Set(tags)
+		this._allTags = tags
+		this.tags = new Set(this._allTags)
 		this._TL = new TL.Timeline(
 			'timeline',
-			{title, events: this._filteredEvents()},
-			options,
+			{title, events: this._filterEvents(this.events)},
+			options
 		)
 	}
 
@@ -34,16 +35,56 @@ export default class Timeline {
 		this._updateEvents()
 	}
 
+	resetTags() {
+		this.tags = new Set(this._allTags)
+		this._updateEvents()
+	}
+
+	setMinDate(date = null) { // accepts a JavaScript Date object
+		this._minDate = date && date.getTime()
+		this._updateEvents()
+	}
+
+	setMaxDate(date = null) { // accepts a JavaScript Date object
+		this._maxDate = date && date.getTime()
+		this._updateEvents()
+	}
+
+	resetDateRange() {
+		this._minDate = null
+		this._maxDate = null
+		this._updateEvents()
+	}
+
+	reset() {
+		this.tags = new Set(this._allTags)
+		this._minDate = null
+		this._maxDate = null
+		this._updateEvents()
+	}
+
 	_currentEvents() {
 		return this._TL.config.events
 	}
 
-	_filteredEvents() {
-		return this.events.filter(event => event.tags.length === 0 || some(event.tags, tag => this.tags.has(tag)))
+	_filterEvents(events) {
+		return events.filter(event => this._filterEvent(event))
+	}
+
+	_filterEvent(event) {
+		// Filter by start_date
+		if (this._minDate && this._minDate > event.start_date.getTime()) {
+			return false
+		}
+		if (this._maxDate && this._maxDate < event.start_date.getTime()) {
+			return false
+		}
+		// Filter by tags
+		return event.tags.length === 0 || some(event.tags, tag => this.tags.has(tag))
 	}
 
 	_updateEvents() {
-		const futureEvents = this._filteredEvents()
+		const futureEvents = this._filterEvents(this.events)
 		const eventsToAdd = differenceWith(futureEvents, this._currentEvents(), eventsComparator)
 		const eventsToRemove = differenceWith(this._currentEvents(), futureEvents, eventsComparator)
 
