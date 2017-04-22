@@ -1,13 +1,13 @@
 import moment from 'moment'
 
 export default class SlideDate {
-	constructor(ISO8601String, displayDateString = null) {
-		const [dateString, timeString] = ISO8601String.split('T')
+	constructor(dateTimeString, displayDateString = null) {
+		const [dateString, timeString] = dateTimeString.split(' ')
 		const dateArray = dateString.split('-')
-		const date = moment(ISO8601String)
+		let date = moment.utc(dateTimeString, 'YYYY-MM-DD HH:mm')
 
-		this.year = date.year()
 		if (timeString) {
+			date = date.local()
 			this.hour = date.hour()
 			this.minute = date.minute()
 		}
@@ -17,6 +17,7 @@ export default class SlideDate {
 		if (dateArray.length >= 2) {
 			this.month = date.month() + 1
 		}
+		this.year = date.year()
 		this.display_date = displayDateString
 	}
 }
