@@ -1,8 +1,4 @@
 export default {
-	EXAMPLE: {
-		title: 'Example Tag',
-		description: 'This is an example tag'
-	},
 	DENIAL: {
 		title: 'Denial',
 		description: 'Denial of contact with Russia'
