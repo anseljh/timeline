@@ -11,7 +11,7 @@ if (process.env.NODE_ENV === 'test') {
 					this.config.events = [event, ...this.config.events]
 				}
 				this.removeId = id => {
-					throw('removeId not implemented')
+					this.config.events = this.config.events.filter(event => event.unique_id !== id)
 				}
 			}
 		}
