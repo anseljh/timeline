@@ -98,7 +98,7 @@ describe('Events', function() {
 			assert.isAbove(events.length, 0)
 		})
 		it('equals unfiltered timeline events count', function() {
-			assert.equal(events.length, timeline._currentEvents().events.length)
+			assert.equal(events.length, timeline._currentEvents().length)
 		})
 	})
 
