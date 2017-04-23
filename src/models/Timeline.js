@@ -1,5 +1,24 @@
-import 'script-loader!TimelineJS3/compiled/js/timeline.js'
 import {differenceWith, some} from 'lodash'
+
+let TimelineJS3
+if (process.env.NODE_ENV === 'test') {
+	// Mock TimelineJS3 api so we can test in non-browser environment
+	TimelineJS3 = {
+		Timeline: class TestTimeline {
+			constructor(id, events, options) {
+				this.config = {events}
+				this.add = function(event) {
+					this.config.events = [event, ...events]
+				}
+				this.removeId = function(id) {
+					throw('removeId not implemented')
+				}
+			}
+		}
+	}
+} else {
+	TimelineJS3 = TL // TL is available globally in browser environment
+}
 
 const options = {
 	hash_bookmark: true,
@@ -18,7 +37,7 @@ export default class Timeline {
 		this.events = events
 		this._allTags = tags
 		this.tags = new Set(this._allTags)
-		this._TL = new TL.Timeline(
+		this._TL = new TimelineJS3.Timeline(
 			'timeline',
 			{title, events: this._filterEvents(this.events)},
 			options

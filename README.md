@@ -1,6 +1,8 @@
 # L4GG Timeline
 Microsite to display events compiled by Lawyers for Good Government Volunteers.
 
+[![Build Status](https://travis-ci.org/L4GG/timeline.svg?branch=master)](https://travis-ci.org/L4GG/timeline)
+
 ## Getting Started
 
 Create a .env file
@@ -30,3 +32,15 @@ npm run create "Event Name" "2017-02-28 19:30"
 Valid event date formats include `YYYY`, `YYYY-MM`, `YYYY-MM-DD`, and `YYYY-MM-DD HH:mm`.
 
 **Note:** Event times will be interpreted in UTC. Please verify that the event time looks correct for your local timezone by viewing it in a browser.
+
+## Testing
+
+Run tests once:
+```
+npm test
+```
+
+Run continuously (you'll need to restart if there are failures):
+```
+npm run test:watch
+```
