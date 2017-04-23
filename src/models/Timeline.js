@@ -28,6 +28,8 @@ export default class Timeline {
 	constructor(title, eras, events, tags) {
 		const options = {
 			hash_bookmark: true,
+			scale_factor: 100,
+			start_at_end: false,
 			debug: process.env.DEBUG === 'TRUE',
 			ga_property_id: process.env.GA_PROPERTY_ID,
 			api_key_embedly: process.env.EMBEDLY_API_KEY
