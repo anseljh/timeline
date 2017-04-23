@@ -5,12 +5,12 @@ if (process.env.NODE_ENV === 'test') {
 	// Mock TimelineJS3 api so we can test in non-browser environment
 	TimelineJS3 = {
 		Timeline: class TestTimeline {
-			constructor(id, events, options) {
-				this.config = {events}
-				this.add = function(event) {
-					this.config.events = [event, ...events]
+			constructor(title, config, options) {
+				this.config = config
+				this.add = event => {
+					this.config.events = [event, ...this.config.events]
 				}
-				this.removeId = function(id) {
+				this.removeId = id => {
 					throw('removeId not implemented')
 				}
 			}
@@ -20,26 +20,28 @@ if (process.env.NODE_ENV === 'test') {
 	TimelineJS3 = TL // TL is available globally in browser environment
 }
 
-const options = {
-	hash_bookmark: true,
-	scale_factor: '10',
-	debug: process.env.DEBUG === 'TRUE',
-	ga_property_id: process.env.GA_PROPERTY_ID,
-	api_key_embedly: process.env.EMBEDLY_API_KEY
-}
-
 function eventsComparator(eventA, eventB) {
 	return eventA.unique_id === eventB.unique_id
 }
 
 export default class Timeline {
-	constructor(title, events, tags) {
+	constructor(title, eras, events, tags) {
+		const options = {
+			hash_bookmark: true,
+			debug: process.env.DEBUG === 'TRUE',
+			ga_property_id: process.env.GA_PROPERTY_ID,
+			api_key_embedly: process.env.EMBEDLY_API_KEY
+		}
 		this.events = events
 		this._allTags = tags
 		this.tags = new Set(this._allTags)
 		this._TL = new TimelineJS3.Timeline(
 			'timeline',
-			{title, events: this._filterEvents(this.events)},
+			{
+				title,
+				eras,
+				events: this._filterEvents(this.events)
+			},
 			options
 		)
 	}
