@@ -1,12 +1,23 @@
-import 'script-loader!TimelineJS3/compiled/js/timeline.js'
 import {differenceWith, some} from 'lodash'
 
-const options = {
-	hash_bookmark: true,
-	scale_factor: '10',
-	debug: process.env.DEBUG === 'TRUE',
-	ga_property_id: process.env.GA_PROPERTY_ID,
-	api_key_embedly: process.env.EMBEDLY_API_KEY
+let TimelineJS3
+if (process.env.NODE_ENV === 'test') {
+	// Mock TimelineJS3 api so we can test in non-browser environment
+	TimelineJS3 = {
+		Timeline: class TestTimeline {
+			constructor(title, config) {
+				this.config = config
+				this.add = event => {
+					this.config.events = [event, ...this.config.events]
+				}
+				this.removeId = id => {
+					this.config.events = this.config.events.filter(event => event.unique_id !== id)
+				}
+			}
+		}
+	}
+} else {
+	TimelineJS3 = TL // eslint-disable-line no-undef
 }
 
 function eventsComparator(eventA, eventB) {
@@ -14,13 +25,26 @@ function eventsComparator(eventA, eventB) {
 }
 
 export default class Timeline {
-	constructor(title, events, tags) {
+	constructor(title, eras, events, tags) {
+		const options = {
+			hash_bookmark: true,
+			scale_factor: 100,
+			start_at_end: false,
+			debug: process.env.DEBUG === 'TRUE',
+			ga_property_id: process.env.GA_PROPERTY_ID,
+			api_key_embedly: process.env.EMBEDLY_API_KEY
+		}
 		this.events = events
-		this.tags = new Set(tags)
-		this._TL = new TL.Timeline(
+		this._allTags = tags
+		this.tags = new Set(this._allTags)
+		this._TL = new TimelineJS3.Timeline(
 			'timeline',
-			{title, events: this._filteredEvents()},
-			options,
+			{
+				title,
+				eras,
+				events: this._filterEvents(this.events)
+			},
+			options
 		)
 	}
 
@@ -34,16 +58,56 @@ export default class Timeline {
 		this._updateEvents()
 	}
 
+	resetTags() {
+		this.tags = new Set(this._allTags)
+		this._updateEvents()
+	}
+
+	setMinDate(date = null) { // accepts a JavaScript Date object
+		this._minDate = date && date.getTime()
+		this._updateEvents()
+	}
+
+	setMaxDate(date = null) { // accepts a JavaScript Date object
+		this._maxDate = date && date.getTime()
+		this._updateEvents()
+	}
+
+	resetDateRange() {
+		this._minDate = null
+		this._maxDate = null
+		this._updateEvents()
+	}
+
+	reset() {
+		this.tags = new Set(this._allTags)
+		this._minDate = null
+		this._maxDate = null
+		this._updateEvents()
+	}
+
 	_currentEvents() {
 		return this._TL.config.events
 	}
 
-	_filteredEvents() {
-		return this.events.filter(event => event.tags.length === 0 || some(event.tags, tag => this.tags.has(tag)))
+	_filterEvents(events) {
+		return events.filter(event => this._filterEvent(event))
+	}
+
+	_filterEvent(event) {
+		// Filter by start_date
+		if (this._minDate && this._minDate > event.start_date.getTime()) {
+			return false
+		}
+		if (this._maxDate && this._maxDate < event.start_date.getTime()) {
+			return false
+		}
+		// Filter by tags
+		return event.tags.length === 0 || some(event.tags, tag => this.tags.has(tag))
 	}
 
 	_updateEvents() {
-		const futureEvents = this._filteredEvents()
+		const futureEvents = this._filterEvents(this.events)
 		const eventsToAdd = differenceWith(futureEvents, this._currentEvents(), eventsComparator)
 		const eventsToRemove = differenceWith(this._currentEvents(), futureEvents, eventsComparator)
 
@@ -56,9 +120,6 @@ export default class Timeline {
 	}
 
 	_removeEvents(events) {
-		try {
-			events.forEach(event => this._TL.removeId(event.unique_id))
-		} catch(e) {
-		}
+		events.forEach(event => this._TL.removeId(event.unique_id))
 	}
 }

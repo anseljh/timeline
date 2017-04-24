@@ -1,0 +1,25 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 7,
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true
+    },
+    "sourceType": "module"
+  },
+  "extends": "eslint:recommended",
+  "plugins": [
+    "standard",
+    "promise"
+  ],
+  "rules": {
+    "no-trailing-spaces": "error",
+    "semi": ["error", "never"],
+    "indent": ["error", "tab"],
+    "object-curly-spacing": ["error", "never"],
+    "brace-style": "error",
+    "no-console": ["error", { "allow": ["warn", "error"] }]
+  },
+  "env": {
+    "es6": true
+  }
+}

@@ -17,10 +17,8 @@ if (!eventDate.isValid()) {
 	console.error(`"${eventDateString}" is an invalid date. Please pass a date in the format "YYYY-MM-DD HH:mm".`)
 	return
 }
-
-const eventPath = `src/events/${eventDate.year()}/${Case.kebab(eventName)}`
-
-mkdirp(path.join(process.cwd(), eventPath), err => {
+const eventPath = path.join(process.cwd(), 'src', 'events', String(eventDate.year()), Case.kebab(eventName))
+mkdirp(eventPath, err => {
 	if (err) {
 		throw(err)
 	} else {
@@ -36,7 +34,7 @@ mkdirp(path.join(process.cwd(), eventPath), err => {
 })
 
 function generateFile(fileName, content = '') {
-	const filePath = `${eventPath}/${fileName}`
+	const filePath = path.join(eventPath, fileName)
 	fs.stat(filePath, err => {
 		if (err) {
 			fs.writeFile(filePath, content, undefined, () => console.log(`Created ${filePath}`))

@@ -1,8 +1,5 @@
 import 'index.scss'
-import title from 'title-slide'
-import events from 'utils/eventsDirectoryToSlideArray'
-import tags from 'utils/Tags'
-import Timeline from 'models/Timeline'
-import {keys} from 'lodash'
+import 'script-loader!TimelineJS3/compiled/js/timeline.js'
+import timeline from './timeline'
 
-window.timeline = new Timeline(title, events, keys(tags))
+window.timeline = timeline // eslint-disable-line no-undef
