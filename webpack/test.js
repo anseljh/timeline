@@ -4,7 +4,7 @@ const WebpackShellPlugin = require('webpack-shell-plugin')
 const generateConfig = require('./base')
 
 const config = generateConfig()
-config.entry = 'test.js'
+config.entry = `tests.${process.env.TEST_TYPE || 'all'}.js`
 config.output = {
 	filename: 'testBundle.js',
 	path: path.join(__dirname, '../dist/.tmp-tests')

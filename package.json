@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "NODE_ENV=test webpack --hide-modules",
-    "test:watch": "NODE_ENV=test webpack --watch --hide-modules",
+    "test:watch": "NODE_ENV=test TEST_TYPE=unit webpack --watch --hide-modules",
+    "test:unit": "NODE_ENV=test TEST_TYPE=unit webpack --hide-modules",
+    "test:integration": "NODE_ENV=test TEST_TYPE=integration webpack --hide-modules",
     "start": "webpack-dev-server --progress --colors --watch",
     "prod": "node server.js",
     "build": "NODE_ENV=production webpack --display-error-details",
