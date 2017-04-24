@@ -26,9 +26,9 @@ export default function(eventDirectory) {
 		const contents = getContents(file)
 		if (!startsWith(contents, 'http') && contents.match(/\.(jpeg|jpg|gif|png)$/)) {
 			return getImageUrl(contents)
-		}
-		else
+		} else {
 			return contents
+		}
 	}
 
 	function getTags(file) {

@@ -5,7 +5,7 @@ if (process.env.NODE_ENV === 'test') {
 	// Mock TimelineJS3 api so we can test in non-browser environment
 	TimelineJS3 = {
 		Timeline: class TestTimeline {
-			constructor(title, config, options) {
+			constructor(title, config) {
 				this.config = config
 				this.add = event => {
 					this.config.events = [event, ...this.config.events]
@@ -17,7 +17,7 @@ if (process.env.NODE_ENV === 'test') {
 		}
 	}
 } else {
-	TimelineJS3 = TL // TL is available globally in browser environment
+	TimelineJS3 = TL // eslint-disable-line no-undef
 }
 
 function eventsComparator(eventA, eventB) {
@@ -120,9 +120,6 @@ export default class Timeline {
 	}
 
 	_removeEvents(events) {
-		try {
-			events.forEach(event => this._TL.removeId(event.unique_id))
-		} catch(e) {
-		}
+		events.forEach(event => this._TL.removeId(event.unique_id))
 	}
 }

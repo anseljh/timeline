@@ -1,7 +1,5 @@
 import chai from 'chai'
-import {keys, uniq} from 'lodash'
-import URI from 'urijs'
-import request from 'request'
+import {keys} from 'lodash'
 import events from 'utils/eventsDirectoryToSlideArray'
 import timeline from '../../src/timeline'
 import tags from 'utils/Tags'

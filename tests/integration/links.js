@@ -20,7 +20,7 @@ describe('Event Links', function() {
 		uniq(urls).forEach(url => {
 			it(url, done => {
 				function tryRequest(uri, tries=0) {
-					request.get({uri, timeout, maxRedirects}, (error, response, body) => {
+					request.get({uri, timeout, maxRedirects}, (error, response) => {
 						if (error && tries < 4) {
 							// Retry request if failed (usually due to a timeout)
 							return tryRequest(uri, ++tries)
