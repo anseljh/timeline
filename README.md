@@ -35,12 +35,22 @@ Valid event date formats include `YYYY`, `YYYY-MM`, `YYYY-MM-DD`, and `YYYY-MM-D
 
 ## Testing
 
-Run tests once:
+Run all unit and integration tests:
 ```
 npm test
 ```
 
-Run continuously (you'll need to restart if there are failures):
+Run unit tests on file changes (you'll need to restart if there are failures):
 ```
 npm run test:watch
+```
+
+Run only unit tests:
+```
+npm run test:unit
+```
+
+Run only integration tests:
+```
+npm run test:integration
 ```
