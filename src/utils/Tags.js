@@ -194,5 +194,13 @@ export default {
 	GUCCIFER: {
 		title: 'Guccifer 2.0',
 		description: 'Guccifer 2.0 involvement in hacking during the 2016 election'
+	},
+	WIKILEAKS: {
+		title: 'Wikileaks',
+		description: 'Contacts with Russia about Wikileaks release of hacked emails'
+	},
+	JULIAN_ASSANGE: {
+		title: 'Julian Assange',
+		description: 'Contacts with Julian Assange about Wikileaks release of hacked emails'
 	}
 }
