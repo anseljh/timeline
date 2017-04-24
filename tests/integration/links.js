@@ -6,7 +6,8 @@ import events from 'utils/eventsDirectoryToSlideArray'
 
 describe('Event Links', function() {
 	describe('are valid', function() {
-		const timeout = 15000
+		const maxRedirects = 20
+		const timeout = 10000
 		this.timeout(timeout*4)
 		this.slow(1200)
 
@@ -19,7 +20,7 @@ describe('Event Links', function() {
 		uniq(urls).forEach(url => {
 			it(url, done => {
 				function tryRequest(uri, tries=0) {
-					request.get({uri, timeout, maxRedirects: 20}, (error, response, body) => {
+					request.get({uri, timeout, maxRedirects}, (error, response, body) => {
 						if (error && tries < 4) {
 							// Retry request if failed (usually due to a timeout)
 							return tryRequest(uri, ++tries)
@@ -27,7 +28,7 @@ describe('Event Links', function() {
 						assert.isNull(error)
 						assert.equal(response.statusCode, 200)
 						done()
-					})
+					}).setMaxListeners(maxRedirects)
 				}
 				tryRequest(url)
 			})
