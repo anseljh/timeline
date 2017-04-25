@@ -202,5 +202,9 @@ export default {
 	JULIAN_ASSANGE: {
 		title: 'Julian Assange',
 		description: 'Contacts with Julian Assange about Wikileaks release of hacked emails'
+	},
+	ROSNEFT: {
+		title: 'Rosneft',
+		description: 'Russian state-owned oil company'
 	}
 }
