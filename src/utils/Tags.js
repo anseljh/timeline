@@ -206,5 +206,9 @@ export default {
 	ROSNEFT: {
 		title: 'Rosneft',
 		description: 'Russian state-owned oil company'
+	},
+	ALFA_BANK: {
+		title: 'Alfa Bank',
+		description: 'Contacts with Alfa Bank, a Russian bank subject to U.S. Sanctions'
 	}
 }
