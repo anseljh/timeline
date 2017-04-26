@@ -210,5 +210,9 @@ export default {
 	ALFA_BANK: {
 		title: 'Alfa Bank',
 		description: 'Contacts with Alfa Bank, a Russian bank subject to U.S. Sanctions'
+	},
+	VICTOR_YANUKOVYCH: {
+		title: 'Victor Yanukovych',
+		description: 'Contacts between Trump associates and former Ukrainian Prime Minister, Victor Yanukovych'
 	}
 }
