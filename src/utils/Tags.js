@@ -214,5 +214,9 @@ export default {
 	VICTOR_YANUKOVYCH: {
 		title: 'Victor Yanukovych',
 		description: 'Contacts between Trump associates and former Ukrainian Prime Minister, Victor Yanukovych'
+	},
+	JEFF_SESSIONS: {
+		title: 'Jeff Sessions',
+		description: 'Contacts with Russians and statements by Jeff Sessions, current Attorney General'
 	}
 }
