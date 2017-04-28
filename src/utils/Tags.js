@@ -218,5 +218,9 @@ export default {
 	JEFF_SESSIONS: {
 		title: 'Jeff Sessions',
 		description: 'Contacts with Russians and statements by Jeff Sessions, current Attorney General'
+	},
+	JAMES_COMEY: {
+		title: 'James Comey',
+		description: 'Statements about Russian contact with the Trump Campaign by James Comey, FBI Director'
 	}
 }
