@@ -226,5 +226,13 @@ export default {
 	TRUMP_SOHO: {
 		title: 'Trump Soho',
 		description: 'Russian involvement in the development of Trump Soho'
+	},
+	IVANKA_TRUMP: {
+		title: 'Ivanka Trump',
+		description: 'Contact between Russians and daughter of Donald Trump, Invanka Trump'
+	},
+	DONALD_TRUMP_JR: {
+		title: 'Donald Trump Jr.',
+		description: 'Contact between Russians and son of Donald Trump, Donald Trump Jr.'
 	}
 }
