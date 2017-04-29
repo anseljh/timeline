@@ -222,5 +222,9 @@ export default {
 	JAMES_COMEY: {
 		title: 'James Comey',
 		description: 'Statements about Russian contact with the Trump Campaign by James Comey, FBI Director'
+	},
+	TRUMP_SOHO: {
+		title: 'Trump Soho',
+		description: 'Russian involvement in the development of Trump Soho'
 	}
 }
