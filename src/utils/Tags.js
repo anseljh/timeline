@@ -238,5 +238,9 @@ export default {
 	ELECTION_INTERFERENCE: {
 		title: 'Election Interference',
 		description: 'Actions and attempts to interfere with the 2016 U.S. presidential election'
+	},
+	FISA: {
+		title: 'FISA Warrant',
+		description: 'FISA Warrants regarding contacts between Russia and Trump and his associates'
 	}
 }
