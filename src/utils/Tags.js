@@ -250,5 +250,9 @@ export default {
 	MICHAEL_COHEN: {
 		title: 'Michael Cohen',
 		description: 'Michael Cohen, attorney for Trump, contacts with Pro_Russian Ukranians and Russians'
+	},
+	IGOR_SECHIN: {
+		title: 'Igor Sechin',
+		description: 'Russian contact by Igor Sechin, chairman of Rosneft and former deputy prime misnister'
 	}
 }
