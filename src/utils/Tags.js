@@ -242,5 +242,13 @@ export default {
 	FISA: {
 		title: 'FISA Warrant',
 		description: 'FISA Warrants regarding contacts between Russia and Trump and his associates'
+	},
+	ANDRII_ARTEMENKO: {
+		title: 'Andrii Artemenko',
+		description: 'Pro-Russian Ukranian politician, Andrii Artemenko contact with the Trump campaign'
+	},
+	MICHAEL_COHEN: {
+		title: 'Michael Cohen',
+		description: 'Michael Cohen, attorney for Trump, contacts with Pro_Russian Ukranians and Russians'
 	}
 }
