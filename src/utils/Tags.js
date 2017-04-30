@@ -234,5 +234,9 @@ export default {
 	DONALD_TRUMP_JR: {
 		title: 'Donald Trump Jr.',
 		description: 'Contact between Russians and son of Donald Trump, Donald Trump Jr.'
+	},
+	ELECTION_INTERFERENCE: {
+		title: 'Election Interference',
+		description: 'Actions and attempts to interfere with the 2016 U.S. presidential election'
 	}
 }
