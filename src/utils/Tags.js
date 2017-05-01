@@ -254,5 +254,9 @@ export default {
 	IGOR_SECHIN: {
 		title: 'Igor Sechin',
 		description: 'Russian contact by Igor Sechin, chairman of Rosneft and former deputy prime misnister'
+	},
+	DOSSIER: {
+		title: 'Dossier',
+		description: 'The 35-Page dossier of information the Russians have on Trump'
 	}
 }
