@@ -258,5 +258,9 @@ export default {
 	DOSSIER: {
 		title: 'Dossier',
 		description: 'The 35-Page dossier of information the Russians have on Trump'
+	},
+	JARED_KUSHNER: {
+		title: 'Jared Kushner',
+		description: 'Contacts between Russia and Jared Kushner, son-in-law and advisor to Donald Trump'
 	}
 }
