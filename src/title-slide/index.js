@@ -4,11 +4,13 @@ import SlideMedia from 'models/SlideMedia'
 
 import title from './slide-title.html'
 import text from './slide-text.html'
+import image from 'images/l4gg-logo-500.png'
+import caption from './slide-caption.html'
 
 const titleSlide = new Slide(
 	null,
 	new SlideContent(title, text),
-	new SlideMedia('/images/l4gg-logo-500.png'),
+	new SlideMedia(image, caption),
 	null
 )
 
