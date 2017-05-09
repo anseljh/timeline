@@ -235,6 +235,10 @@ export default {
 		title: 'Donald Trump Jr.',
 		description: 'Contact between Russians and son of Donald Trump, Donald Trump Jr.'
 	},
+	ERIC_TRUMP: {
+		title: 'Eric Trump',
+		description: 'Contact between Russians and son of Donald Trump, Eric Trump'
+	},
 	ELECTION_INTERFERENCE: {
 		title: 'Election Interference',
 		description: 'Actions and attempts to interfere with the 2016 U.S. presidential election'
