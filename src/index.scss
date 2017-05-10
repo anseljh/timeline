@@ -34,3 +34,44 @@ html, body, #timeline-embed {
 }
 .tl-timeera.tl-timeera-color5 .tl-timeera-background {
 }
+
+#l4gg-header {
+	background-color: #dddddd;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+#l4gg-header ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+#l4gg-header li {
+	display: inline;
+	float: left;
+	font-size: 1.2em;
+	padding: 14px 16px;
+}
+#l4gg-header li a {
+	text-decoration: none;
+	font-weight: 400;
+	font-color: white;
+}
+#l4gg-header li a:visited {
+	font-color: white;
+}
+#l4gg-header input[type=text] {
+	font-size: 1em;
+	font-weight: lighter;
+	padding: 6px 10px;
+}
+#l4gg-header #l4gg-header-donate {
+	float:right;
+}
+#l4gg-header button {
+	background-color: lightblue;
+	border: none;
+	border-radius: 8px;
+	color: white;
+	font-size: 1.2em;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
