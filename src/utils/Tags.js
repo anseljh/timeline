@@ -267,4 +267,8 @@ export default {
 		title: 'Jared Kushner',
 		description: 'Contacts between Russia and Jared Kushner, son-in-law and advisor to Donald Trump'
 	}
+	GRAND_JURY: {
+		title: 'Grand Jury',
+		description: 'Events related to reported grand jury proceedings'
+	}
 }
