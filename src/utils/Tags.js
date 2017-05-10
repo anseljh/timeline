@@ -109,7 +109,7 @@ export default {
 	},
 	NSA: {
 		title: 'NSA',
-		description: 'Actions by or relating to the national security adviser'
+		description: 'Actions by or relating to the National Security Adviser'
 	},
 	REPUBLICAN_CONVENTION: {
 		title: 'Republican Convention',
@@ -169,7 +169,7 @@ export default {
 	},
 	TRUMP_CAMPAIGN: {
 		title: 'Trump Campaign',
-		description: 'Actions and statemens by the Trump Campaign'
+		description: 'Actions and statements by the Trump Campaign'
 	},
 	PAUL_MANAFORT: {
 		title: 'Paul Manafort',
@@ -202,5 +202,69 @@ export default {
 	JULIAN_ASSANGE: {
 		title: 'Julian Assange',
 		description: 'Contacts with Julian Assange about Wikileaks release of hacked emails'
+	},
+	ROSNEFT: {
+		title: 'Rosneft',
+		description: 'Russian state-owned oil company'
+	},
+	ALFA_BANK: {
+		title: 'Alfa Bank',
+		description: 'Contacts with Alfa Bank, a Russian bank subject to U.S. Sanctions'
+	},
+	VICTOR_YANUKOVYCH: {
+		title: 'Victor Yanukovych',
+		description: 'Contacts between Trump associates and former Ukrainian Prime Minister, Victor Yanukovych'
+	},
+	JEFF_SESSIONS: {
+		title: 'Jeff Sessions',
+		description: 'Contacts with Russians and statements by Jeff Sessions, current Attorney General'
+	},
+	JAMES_COMEY: {
+		title: 'James Comey',
+		description: 'Statements about Russian contact with the Trump Campaign by James Comey, FBI Director'
+	},
+	TRUMP_SOHO: {
+		title: 'Trump Soho',
+		description: 'Russian involvement in the development of Trump Soho'
+	},
+	IVANKA_TRUMP: {
+		title: 'Ivanka Trump',
+		description: 'Contact between Russians and daughter of Donald Trump, Invanka Trump'
+	},
+	DONALD_TRUMP_JR: {
+		title: 'Donald Trump Jr.',
+		description: 'Contact between Russians and son of Donald Trump, Donald Trump Jr.'
+	},
+	ERIC_TRUMP: {
+		title: 'Eric Trump',
+		description: 'Contact between Russians and son of Donald Trump, Eric Trump'
+	},
+	ELECTION_INTERFERENCE: {
+		title: 'Election Interference',
+		description: 'Actions and attempts to interfere with the 2016 U.S. presidential election'
+	},
+	FISA: {
+		title: 'FISA Warrant',
+		description: 'FISA Warrants regarding contacts between Russia and Trump and his associates'
+	},
+	ANDRII_ARTEMENKO: {
+		title: 'Andrii Artemenko',
+		description: 'Pro-Russian Ukranian politician, Andrii Artemenko contact with the Trump campaign'
+	},
+	MICHAEL_COHEN: {
+		title: 'Michael Cohen',
+		description: 'Michael Cohen, attorney for Trump, contacts with Pro_Russian Ukranians and Russians'
+	},
+	IGOR_SECHIN: {
+		title: 'Igor Sechin',
+		description: 'Russian contact by Igor Sechin, chairman of Rosneft and former deputy prime misnister'
+	},
+	DOSSIER: {
+		title: 'Dossier',
+		description: 'The 35-Page dossier of information the Russians have on Trump'
+	},
+	JARED_KUSHNER: {
+		title: 'Jared Kushner',
+		description: 'Contacts between Russia and Jared Kushner, son-in-law and advisor to Donald Trump'
 	}
 }
