@@ -109,7 +109,7 @@ export default {
 	},
 	NSA: {
 		title: 'NSA',
-		description: 'Actions by or relating to the national security adviser'
+		description: 'Actions by or relating to the National Security Adviser'
 	},
 	REPUBLICAN_CONVENTION: {
 		title: 'Republican Convention',
@@ -169,7 +169,7 @@ export default {
 	},
 	TRUMP_CAMPAIGN: {
 		title: 'Trump Campaign',
-		description: 'Actions and statemens by the Trump Campaign'
+		description: 'Actions and statements by the Trump Campaign'
 	},
 	PAUL_MANAFORT: {
 		title: 'Paul Manafort',
@@ -234,6 +234,10 @@ export default {
 	DONALD_TRUMP_JR: {
 		title: 'Donald Trump Jr.',
 		description: 'Contact between Russians and son of Donald Trump, Donald Trump Jr.'
+	},
+	ERIC_TRUMP: {
+		title: 'Eric Trump',
+		description: 'Contact between Russians and son of Donald Trump, Eric Trump'
 	},
 	ELECTION_INTERFERENCE: {
 		title: 'Election Interference',
