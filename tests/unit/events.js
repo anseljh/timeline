@@ -49,7 +49,7 @@ const eventSchema = {
 			properties: {
 				headline: {
 					type: 'string',
-					maxLength: 60,
+					maxLength: 55,
 					minLength: 5
 				},
 				text: {
