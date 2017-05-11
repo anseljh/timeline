@@ -97,7 +97,7 @@ export default {
 	},
 	TRUMP_TOWER: {
 		title: 'Trump Tower',
-		description: 'Events occuring in or relating to Trump Tower'
+		description: 'Events occurring in or relating to Trump Tower'
 	},
 	MICHAEL_FLYNN: {
 		title: 'Michael Flynn',
@@ -153,11 +153,11 @@ export default {
 	},
 	KELLYANNE_CONWAY: {
 		title: 'Kellyanne Conway',
-		description: 'Statements by Kelleyanne Conway'
+		description: 'Statements by Kellyanne Conway'
 	},
 	DMITRY_RYBOLOVLEV: {
 		title: 'Dmitry Rybolovlev',
-		description: 'Contact between Donald Trump and Russian oligarch, Dmitry Rybolovlev'
+		description: 'Contact between Donald Trump and Russian oligarch Dmitry Rybolovlev'
 	},
 	CARTER_PAGE: {
 		title: 'Carter Page',
@@ -249,11 +249,11 @@ export default {
 	},
 	ANDRII_ARTEMENKO: {
 		title: 'Andrii Artemenko',
-		description: 'Pro-Russian Ukranian politician, Andrii Artemenko contact with the Trump campaign'
+		description: 'Pro-Russian Ukrainian politician, Andrii Artemenko contact with the Trump campaign'
 	},
 	MICHAEL_COHEN: {
 		title: 'Michael Cohen',
-		description: 'Michael Cohen, attorney for Trump, contacts with Pro_Russian Ukranians and Russians'
+		description: 'Michael Cohen, attorney for Trump, contacts with Pro-Russian Ukrainians and Russians'
 	},
 	IGOR_SECHIN: {
 		title: 'Igor Sechin',
