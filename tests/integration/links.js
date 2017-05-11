@@ -18,12 +18,16 @@ describe('Event Links', function() {
 			url => urls.push(url.split('\\">')[0])
 		)
 		uniq(urls).forEach(url => {
-			it(url, done => {
+			it(url, function(done) {
+				const self = this
 				function tryRequest(uri, tries=0) {
 					request.get({uri, timeout, maxRedirects}, (error, response) => {
 						if (error && tries < 4) {
 							// Retry request if failed (usually due to a timeout)
 							return tryRequest(uri, ++tries)
+						}
+						if (response.statusCode === 403) {
+							self.skip()
 						}
 						assert.isNull(error)
 						assert.equal(response.statusCode, 200)
