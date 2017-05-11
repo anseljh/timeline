@@ -14,7 +14,8 @@ if (process.env.NODE_ENV === 'test') {
 					this.config.events = this.config.events.filter(event => event.unique_id !== id)
 				}
 			}
-		}
+		},
+		Ease: {blink: () => null}
 	}
 } else {
 	TimelineJS3 = TL // eslint-disable-line no-undef
@@ -28,8 +29,11 @@ export default class Timeline {
 	constructor(title, eras, events, tags) {
 		const options = {
 			hash_bookmark: true,
-			scale_factor: 100,
+			scale_factor: 2,
+			zoom_sequence: [1, 2, 30, 120, 300],
 			start_at_end: false,
+			duration: 1,
+			ease: TimelineJS3.Ease.blink,
 			debug: process.env.DEBUG === 'TRUE',
 			ga_property_id: process.env.GA_PROPERTY_ID,
 			api_key_embedly: process.env.EMBEDLY_API_KEY
