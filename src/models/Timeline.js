@@ -46,7 +46,7 @@ export default class Timeline {
 			{
 				title,
 				eras,
-				events: this._filterEvents(this.events)
+				events: this.events
 			},
 			options
 		)
