@@ -12,7 +12,8 @@
     "prod": "node server.js",
     "build": "NODE_ENV=production webpack --display-error-details",
     "create": "node create-event.js",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build",
+    "json": "python3 build-json.py . events.js"
   },
   "repository": {
     "type": "git",
