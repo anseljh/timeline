@@ -3,6 +3,7 @@ const webpack = require('webpack')
 const path = require('path')
 const BabiliPlugin = require('babili-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 const sourcePath = path.join(__dirname, '../src')
 const staticsPath = path.join(__dirname, '../dist')
@@ -27,7 +28,8 @@ module.exports = function() {
 				collapseWhitespace: true,
 				html5: true,
 			}
-		})
+		}),
+		new ExtractTextPlugin('application.css')
 	]
 
 	if (isProd) {
@@ -69,21 +71,17 @@ module.exports = function() {
 				},
 				{
 					test: /\.css$/,
-					exclude: /node_modules/,
-					use: [
-						'style-loader',
-						'css-loader'
-					]
+					use: ExtractTextPlugin.extract({
+						fallback: 'style-loader',
+						use: 'css-loader'
+					})
 				},
 				{
 					test: /\.scss$/,
-					use: [{
-						loader: 'style-loader'
-					}, {
-						loader: 'css-loader'
-					}, {
-						loader: 'sass-loader'
-					}]
+					use: ExtractTextPlugin.extract({
+						fallback: 'style-loader',
+						use: ['css-loader', 'sass-loader']
+					})
 				},
 				{
 					test: /\.(ttf|eot|svg|woff)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
