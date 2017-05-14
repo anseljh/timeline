@@ -32,7 +32,7 @@ export default class Timeline {
 			scale_factor: 2,
 			zoom_sequence: [1, 2, 30, 120, 300],
 			start_at_end: false,
-			duration: 1,
+			duration: 0,
 			ease: TimelineJS3.Ease.blink,
 			debug: process.env.DEBUG === 'TRUE',
 			ga_property_id: process.env.GA_PROPERTY_ID,
