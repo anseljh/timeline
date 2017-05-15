@@ -8,9 +8,10 @@
     "test:watch": "NODE_ENV=test TEST_TYPE=unit webpack --watch --hide-modules",
     "test:unit": "NODE_ENV=test TEST_TYPE=unit webpack --hide-modules",
     "test:integration": "NODE_ENV=test TEST_TYPE=integration webpack --hide-modules",
-    "start": "webpack-dev-server --progress --colors --watch",
-    "prod": "node server.js",
-    "build": "NODE_ENV=production webpack --display-error-details",
+    "start": "NODE_ENV=development webpack-dev-server --progress --colors --watch",
+    "prod": "node server",
+    "build": "NODE_ENV=build webpack --display-error-details",
+    "post-build": "node dist/generate-events && NODE_ENV=production webpack --display-error-details",
     "create": "node create-event.js",
     "heroku-postbuild": "npm run build"
   },
@@ -62,6 +63,7 @@
     "case": "^1.4.2",
     "express": "^4.14.1",
     "lodash": "^4.17.4",
-    "moment": "^2.17.1"
+    "moment": "^2.17.1",
+    "superagent": "^3.5.2"
   }
 }
