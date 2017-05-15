@@ -11,7 +11,7 @@ function generateTimeline(events) {
 
 export default function() {
 	if (process.env.NODE_ENV === 'production') {
-		return superagent.get('/api/events')
+		return superagent.get('/api/v1/events')
 			.then(response => generateTimeline(response.body))
 	} else {
 		const events = require('./utils/eventsDirectoryToSlideArray').default
