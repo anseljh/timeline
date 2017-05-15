@@ -64,9 +64,9 @@ module.exports = function() {
 					exclude: /node_modules/,
 					use: {
 						loader: 'html-loader',
-						query: {
-							name: '[name].[ext]'
-						},
+						options: {
+							minimize: isProd
+						}
 					},
 				},
 				{
