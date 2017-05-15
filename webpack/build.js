@@ -11,8 +11,5 @@ config.externals = [nodeExternals()]
 config.node = {
 	fs: 'empty'
 }
-config.plugins.push(new WebpackShellPlugin({
-	onBuildExit: 'npm run post-build'
-}))
 
 module.exports = config
