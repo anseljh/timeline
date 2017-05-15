@@ -29,7 +29,8 @@ module.exports = function() {
 				html5: true,
 			}
 		}),
-		new ExtractTextPlugin('application.css')
+		new ExtractTextPlugin('application.css'),
+		new BabiliPlugin()
 	]
 
 	if (isProd) {
@@ -37,8 +38,7 @@ module.exports = function() {
 			new webpack.LoaderOptionsPlugin({
 				minimize: true,
 				debug: false
-			}),
-			new BabiliPlugin()
+			})
 		)
 	} else {
 		plugins.push(
@@ -50,11 +50,11 @@ module.exports = function() {
 		devtool: isProd ? 'source-map' : 'eval',
 		context: sourcePath,
 		entry: {
-			js: './index.js'
+			app: './index.js'
 		},
 		output: {
 			path: staticsPath,
-			filename: 'app.bundle.js',
+			filename: '[name].bundle.js',
 			publicPath: isProd ? './' : '/'
 		},
 		module: {
@@ -64,9 +64,9 @@ module.exports = function() {
 					exclude: /node_modules/,
 					use: {
 						loader: 'html-loader',
-						query: {
-							name: '[name].[ext]'
-						},
+						options: {
+							minimize: isProd
+						}
 					},
 				},
 				{
