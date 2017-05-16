@@ -41,7 +41,7 @@ export default [
 		end_date: {
 			year: today.year(),
 			month: today.month() + 1,
-			day: today.day() + 1
+			day: today.date() + 1
 		},
 		text: {
 			headline: "Trump Administration"
