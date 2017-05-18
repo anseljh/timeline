@@ -1,5 +1,7 @@
 import 'index.scss'
 import 'script-loader!TimelineJS3/compiled/js/timeline.js'
-import timeline from './timeline'
+import generateTimeline from './timeline'
 
-window.timeline = timeline // eslint-disable-line no-undef
+generateTimeline().then(timeline => {
+	window.timeline = timeline // eslint-disable-line no-undef
+})

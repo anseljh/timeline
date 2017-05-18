@@ -1,7 +1,7 @@
 import chai from 'chai'
 import {keys} from 'lodash'
 import events from 'utils/eventsDirectoryToSlideArray'
-import timeline from '../../src/timeline'
+import generateTimeline from '../../src/timeline'
 import tags from 'utils/Tags'
 
 chai.use(require('chai-json-schema'))
@@ -97,8 +97,13 @@ describe('Events', function() {
 		it('is above zero', function() {
 			assert.isAbove(events.length, 0)
 		})
-		it('equals unfiltered timeline events count', function() {
-			assert.equal(events.length, timeline._currentEvents().length)
+
+		it('equals unfiltered timeline events count', function(done) {
+			generateTimeline().then(timeline => {
+				timeline._filterEvents(events)
+				assert.equal(events.length, timeline._currentEvents().length)
+				done()
+			})
 		})
 	})
 

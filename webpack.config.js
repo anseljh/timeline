@@ -2,10 +2,12 @@ const path = require('path')
 
 function config() {
 	switch (process.env.NODE_ENV) {
-		case 'test':
-			return 'test'
-		default:
-			return 'web'
+	case 'test':
+		return 'test'
+	case 'build':
+		return 'build'
+	default:
+		return 'web'
 	}
 }
 

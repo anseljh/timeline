@@ -4,14 +4,15 @@
   "description": "Microsite to display events compiled by Lawyers for Good Government Volunteers.",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=test webpack --hide-modules",
-    "test:watch": "NODE_ENV=test TEST_TYPE=unit webpack --watch --hide-modules",
-    "test:unit": "NODE_ENV=test TEST_TYPE=unit webpack --hide-modules",
-    "test:integration": "NODE_ENV=test TEST_TYPE=integration webpack --hide-modules",
-    "start": "webpack-dev-server --progress --colors --watch",
-    "prod": "node server.js",
-    "build": "NODE_ENV=production webpack --display-error-details",
-    "create": "node create-event.js",
+    "test": "rimraf dist && NODE_ENV=test webpack --hide-modules",
+    "test:watch": "rimraf dist && NODE_ENV=test TEST_TYPE=unit webpack --watch --hide-modules",
+    "test:unit": "rimraf dist && NODE_ENV=test TEST_TYPE=unit webpack --hide-modules",
+    "test:integration": "rimraf dist && NODE_ENV=test TEST_TYPE=integration webpack --hide-modules",
+    "start": "NODE_ENV=development webpack-dev-server --progress --colors --watch",
+    "prod": "node server",
+    "prebuild": "rimraf dist && NODE_ENV=build webpack --display-error-details",
+    "build": "node dist/generate-events && NODE_ENV=production webpack --display-error-details",
+    "create": "node create-event",
     "heroku-postbuild": "npm run build"
   },
   "repository": {
@@ -48,6 +49,7 @@
     "node-sass": "^4.5.0",
     "raw-loader": "^0.5.1",
     "request": "^2.81.0",
+    "rimraf": "^2.6.1",
     "sass-loader": "^6.0.2",
     "script-loader": "^0.7.0",
     "style-loader": "^0.13.2",
@@ -58,10 +60,11 @@
     "webpack-shell-plugin": "^0.5.0"
   },
   "dependencies": {
-    "TimelineJS3": "github:L4GG/TimelineJS3",
+    "TimelineJS3": "github:NUKnightLab/TimelineJS3",
     "case": "^1.4.2",
     "express": "^4.14.1",
     "lodash": "^4.17.4",
-    "moment": "^2.17.1"
+    "moment": "^2.17.1",
+    "superagent": "^3.5.2"
   }
 }
